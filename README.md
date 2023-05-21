@@ -1,6 +1,6 @@
 # [Project] - Real Time SafeMap
 
-pandapath is a real-time mobile application that sources information from responder databases to compute and display verified crime or danger areas on a geographic map. The purpose of the service allows users from all demographics to plan accurate and safe paths to their destination allowing peace of mind and precautionary safety measures. 
+pandapath is a mobile application that computes and displays verified crime and danger areas on a geographic map. The purpose of the service allows users from all demographics to plan accurate and safe paths to their destination allowing peace of mind and precautionary safety measures. 
 
 Try it out by downloading Expo App 
 
