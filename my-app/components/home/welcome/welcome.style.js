@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     marginLeft: 13,
     marginRight: 13,
-    marginTop: 10,
+    marginTop: 15,
     marginBottom: 20,
-    paddingHorizontal: 40,
+    paddingHorizontal: 10,
 
   },
 
@@ -47,10 +47,19 @@ const styles = StyleSheet.create({
     width: 300,
     justifyContent: "center",
     alignItems: "center",
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     marginTop: 40,
     marginBottom: 20,
     
+  },
+
+  savedPlacesText: {
+    fontFamily: FONT.bold,
+    fontSize: 25,
+    color: COLORS.primary,
+    marginTop: 10,
+    textAlign: 'left',
+    paddingTop: 3,
   },
 
   destinationContainer: {

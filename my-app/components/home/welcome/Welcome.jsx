@@ -33,7 +33,9 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
       <View style={styles.mainContainer}>
         <View style={styles.mainWrapper}>
           <View style={styles.savedPlacesContainer}>
-            <View style={styles.savedPlacesWrapper}></View>
+            <View style={styles.savedPlacesWrapper}>
+            <Text style={styles.savedPlacesText}>Saved Places</Text>
+            </View>
             <Text style={styles.promptMessage}>Where would you like to go today?</Text>
 
             <View style={styles.destinationContainer}>
