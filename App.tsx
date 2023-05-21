@@ -1,4 +1,4 @@
-import MapView, { LatLng, Marker, PROVIDER_GOOGLE } from "react-native-maps";
+import MapView, { Heatmap, LatLng, Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import {
   StyleSheet,
   View,
@@ -22,11 +22,95 @@ const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 0.02;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 const INITIAL_POSITION = {
-  latitude: 40.76711,
-  longitude: -73.979704,
+  latitude: 49.260153,
+  longitude: -123.114881,
   latitudeDelta: LATITUDE_DELTA,
   longitudeDelta: LONGITUDE_DELTA,
 };
+
+// latitude = y-axis (UP/DOWN),  longitude = x-axis (LEFT/RIGHT)
+ points = [
+  { latitude: 49.287263, longitude: -123.135029, weight: 1 }, // top left
+  { latitude: 49.286535, longitude: -123.113644, weight: 1 }, // top right
+
+  { latitude: 49.276485, longitude: -123.131859, weight: 1 }, // bottom left
+  { latitude: 49.277269, longitude: -123.112620, weight: 1 }, // bottom right
+
+  { latitude: 49.285022, longitude: -123.131566, weight: 1 }, 
+  { latitude: 49.283696, longitude: -123.122548, weight: 1 },
+  { latitude: 49.284682, longitude: -123.129572, weight: 1 }, 
+  { latitude: 49.276771, longitude: -123.125628, weight: 1 },
+  { latitude: 49.286620, longitude: -123.115358, weight: 1 }, 
+  { latitude: 49.278858, longitude: -123.115938, weight: 1 },
+  { latitude: 49.278860, longitude: -123.117571, weight: 1 }, 
+  { latitude: 49.278494, longitude: -123.128293, weight: 1 },
+  { latitude: 49.279151, longitude: -123.115926, weight: 1 }, 
+  { latitude: 49.280804, longitude: -123.115649, weight: 1 },
+  { latitude: 49.282798, longitude: -123.124357, weight: 1 }, 
+  { latitude: 49.282698, longitude: -123.123638, weight: 1 },
+  { latitude: 49.286923, longitude: -123.126360, weight: 1 }, 
+  { latitude: 49.279007, longitude: -123.118996, weight: 1 },
+  { latitude: 49.286877, longitude: -123.131338, weight: 1 }, 
+  { latitude: 49.279718, longitude: -123.114838, weight: 1 },
+  { latitude: 49.281653, longitude: -123.116137, weight: 1 }, 
+  { latitude: 49.278573, longitude: -123.121294, weight: 1 },
+  { latitude: 49.283729, longitude: -123.128635, weight: 1 },
+  { latitude: 49.283638, longitude: -123.125194, weight: 1 },
+  { latitude: 49.283389, longitude: -123.117388, weight: 1 },
+  { latitude: 49.276883, longitude: -123.131103, weight: 1 },
+  { latitude: 49.279951, longitude: -123.127239, weight: 1 },
+  { latitude: 49.286376, longitude: -123.133310, weight: 1 },
+  { latitude: 49.285725, longitude: -123.123478, weight: 1 },
+  { latitude: 49.286091, longitude: -123.129754, weight: 1 },
+  { latitude: 49.286532, longitude: -123.127669, weight: 1 },
+  { latitude: 49.286803, longitude: -123.128732, weight: 1 },
+  { latitude: 49.286985, longitude: -123.132071, weight: 1 },
+  { latitude: 49.286527, longitude: -123.131749, weight: 1 },
+  { latitude: 49.285888, longitude: -123.130497, weight: 1 },
+  { latitude: 49.286334, longitude: -123.129089, weight: 1 },
+
+  //east hastings
+  { latitude: 49.281348, longitude: -123.104134, weight: 1 }, //left
+  { latitude: 49.281348, longitude: -123.079202, weight: 1 },
+  { latitude: 49.281348, longitude: -123.082337, weight: 1 },
+  { latitude: 49.281348, longitude: -123.085472, weight: 1 },
+  { latitude: 49.281348, longitude: -123.088607, weight: 1 },
+  { latitude: 49.281348, longitude: -123.091742, weight: 1 },
+  { latitude: 49.281348, longitude: -123.094877, weight: 1 },
+  { latitude: 49.281348, longitude: -123.098012, weight: 1 },
+  { latitude: 49.281348, longitude: -123.101147, weight: 1 },
+  { latitude: 49.281348, longitude: -123.104282, weight: 1 },
+  { latitude: 49.281348, longitude: -123.107417, weight: 1 },
+  { latitude: 49.281348, longitude: -123.110552, weight: 1 },
+  { latitude: 49.281348, longitude: -123.113687, weight: 1 },
+  { latitude: 49.281348, longitude: -123.116822, weight: 1 },
+  { latitude: 49.281348, longitude: -123.119957, weight: 1 },
+  { latitude: 49.281348, longitude: -123.123092, weight: 1 },
+  { latitude: 49.281348, longitude: -123.079202, weight: 1 }, //right
+
+  // kits
+  { latitude: 49.264511, longitude: -123.151537, weight: 1 },
+  { latitude: 49.267875, longitude: -123.154339, weight: 1 },
+  { latitude: 49.263537, longitude: -123.163847, weight: 1 },
+  { latitude: 49.259168, longitude: -123.154743, weight: 1 },
+  { latitude: 49.255358, longitude: -123.162301, weight: 1 },
+  { latitude: 49.255694, longitude: -123.145295, weight: 1 },
+
+  //surrey yuuuuutes
+  { latitude: 49.194213, longitude: -122.857279, weight: 1 },
+  { latitude: 49.196625, longitude: -122.810157, weight: 1 },
+  { latitude: 49.188660, longitude: -122.767731, weight: 1 },
+  { latitude: 49.179235, longitude: -122.781473, weight: 1 },
+  { latitude: 49.178786, longitude: -122.804835, weight: 1 },
+  { latitude: 49.174746, longitude: -122.859116, weight: 1 },
+  { latitude: 49.163971, longitude: -122.862552, weight: 1 },
+  { latitude: 49.174297, longitude: -122.882478, weight: 1 },
+  { latitude: 49.176654, longitude: -122.842098, weight: 1 },
+  { latitude: 49.201426, longitude: -122.865766, weight: 1 },
+  { latitude: 49.189311, longitude: -122.856146, weight: 1 },
+  { latitude: 49.187515, longitude: -122.822135, weight: 1 },
+  { latitude: 49.191790, longitude: -122.828770, weight: 1 },
+];
 
 type InputAutocompleteProps = {
   label: string;
@@ -140,6 +224,18 @@ export default function App() {
         provider={PROVIDER_GOOGLE}
         initialRegion={currentLocation || INITIAL_POSITION}
       >
+        <Heatmap
+            points={this.points}
+            radius={100}
+            opacity={0.8}
+            gradient={{
+              colors: ["purple", "red", "orange", "white"],
+              startPoints: Platform.OS === 'ios' ? [0.04, 0.1, 0.45, 0.5] :
+                [0.25, 0.5, 0.75, 1],
+              colorMapSize: 1000
+            }}
+          >
+          </Heatmap>
         {origin && <Marker coordinate={origin} />}
         {destination && <Marker coordinate={destination} />}
         {showDirections && origin && destination && (
@@ -156,13 +252,14 @@ export default function App() {
       <View style={styles.searchContainer}>
         <InputAutocomplete
           label="Origin"
-          placeholder="Current location"
+          placeholder="Search location"
           onPlaceSelected={(details) => {
             onPlaceSelected(details, "origin");
           }}
         />
         <InputAutocomplete
           label="Destination"
+          placeholder="Search location"
           onPlaceSelected={(details) => {
             onPlaceSelected(details, "destination");
           }}
