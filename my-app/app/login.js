@@ -20,7 +20,9 @@ const Home = () => {
         password
       })
 
-      Alert.alert("success!");
+      console.log(response.data);
+
+      router.push({pathname: "/home", params: { data: response.data}})
     } catch (error) {
       Alert.alert("Error", error.message);
     }
