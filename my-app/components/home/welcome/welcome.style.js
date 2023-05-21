@@ -50,12 +50,13 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.darkgreen,
     borderRadius: SIZES.medium,
    justifyContent: "center",
-    alignItems: "left",
+    alignItems: "center",
+    marginTop: 10,
   },
   searchBtnImage: {
     width: "50%",
     height: "50%",
-    tintColor: COLORS.lightgreen,
+    tintColor: COLORS.white,
   },
   tabsContainer: {
     width: "100%",

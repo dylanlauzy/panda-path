@@ -2,10 +2,8 @@ const COLORS = {
   green: '#DAEDD9',
   lightgreen: '#E8FFE7',
   darkgreen: '#398175',
-
   primary: "#312651",
-
-
+  
   gray: "#83829A",
   gray2: "#C1C0C8",
 
