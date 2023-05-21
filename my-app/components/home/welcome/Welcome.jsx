@@ -41,7 +41,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
             <TextInput style={styles.input}
             onChangeText={handleTextInputChange}
             value={textInputValue}
-            placeholder="Current Location"
+            placeholder="Location"
             />
             
             <TextInput style={styles.input}

@@ -117,7 +117,8 @@ const styles = StyleSheet.create({
   input: {
     height: 50,
     width: 250,
-    backgroundColor: COLORS.lightWhite,
+    textAlign: "center",
+    backgroundColor: COLORS.pureWhite,
     marginHorizontal: 20,
     marginVertical: 12,
     paddingHorizontal: 20,
