@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.darkGreen,
     borderRadius: SIZES.medium,
     justifyContent: "center",
-    marginTop: "50%",
+    marginTop: "75%",
 
     marginLeft: "20%",
     marginRight: "20%",
