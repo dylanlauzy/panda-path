@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions} from "react-native";
 
 import { COLORS, FONT, SIZES } from "../../../constants";
 
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     marginTop: 10,
     textAlign: 'left',
-    paddingTop: 3,
+    paddingTop: 10,
   },
 
   destinationContainer: {
@@ -135,6 +135,20 @@ const styles = StyleSheet.create({
     borderColor: COLORS.gray2,
     borderRadius: 10,
     fontFamily: FONT.regular,
+  },
+
+  carouselStyle: {
+    height: 100,
+    width: 50,
+    paddingLeft: 40,
+    paddingTop: 5,
+    paddingBottom: 15,
+  },
+
+  carouselImageStyle: {
+    width: Dimensions.get('window').width -200, 
+    height: 150,
+    borderRadius: 10,
   },
 
   tabsContainer: {

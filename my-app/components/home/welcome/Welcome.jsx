@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   FlatList,
+  Dimensions,
 } from "react-native";
 import { useRouter } from "expo-router";
 
@@ -29,6 +30,32 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
     setTextInputValue2(text);
   };
 
+  const Carousel = () => {
+    const data = [
+      { id: 1, image: require('../../../assets/images/kemal.jpg') },
+      // Add more images as needed
+    ];
+  
+    const renderItem = ({ item }) => (
+      <View style={styles.carouselStyle}>
+        <Image source={item.image} style={styles.carouselImageStyle} />
+      </View>
+    );
+  
+    return (
+      <FlatList
+        data={data}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={renderItem}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        snapToInterval={Dimensions.get('window').width}
+        decelerationRate="fast"
+      />
+    );
+  };
+  
+
 
   
 
@@ -43,6 +70,10 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
           <View style={styles.savedPlacesContainer}>
             <View style={styles.savedPlacesWrapper}>
             <Text style={styles.savedPlacesText}>Saved Places</Text>
+
+      
+            <Carousel></Carousel>
+
             </View>
             <Text style={styles.promptMessage}>Where would you like to go today?</Text>
 
