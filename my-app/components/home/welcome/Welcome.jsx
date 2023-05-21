@@ -14,7 +14,7 @@ import { icons, SIZES } from "../../../constants";
 
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
-const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
+const Welcome = ({ searchTerm, setSearchTerm, handleClick, user }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState("Full-time");
 
@@ -27,7 +27,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.welcomeMessage}>Hi User!</Text>
+        <Text style={styles.welcomeMessage}>Hi {user ? user : "User" }!</Text>
       </View>
 
       <View style={styles.mainContainer}>

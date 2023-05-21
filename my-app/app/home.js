@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, ScrollView, SafeAreaView} from 'react-native';
-import {Stack, useRouter} from 'expo-router';
+import {Stack, useRouter, useLocalSearchParams} from 'expo-router';
 
 import {COLORS, icons, images, SIZES} from '../constants';
 import {
@@ -9,6 +9,7 @@ import {
 
 const Home = () => {
     const router = useRouter();
+    const {user} = useLocalSearchParams();
 
     return (
         <SafeAreaView style = {{flex: 1, 
@@ -37,6 +38,7 @@ const Home = () => {
         </View>
 
         <Welcome
+          user={user}
         
         />
 

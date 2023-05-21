@@ -1,6 +1,6 @@
 import { StyleSheet, Text, SafeAreaView, View, TextInput, TouchableOpacity, Alert } from "react-native";
 import { useState } from "react";
-import { Stack, useRouter } from "expo-router";
+import { Stack, useRouter, useLocalSearchParams } from "expo-router";
 import { FONT, SIZES, COLORS } from "../constants/theme";
 import axios from 'axios';
 
@@ -8,6 +8,8 @@ const API_URL = "http://localhost:8000/api/users/login"
 
 const Home = () => {
   const router = useRouter();
+  const params = useLocalSearchParams();
+  const {id = 69, other} = params;
   
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -20,9 +22,9 @@ const Home = () => {
         password
       })
 
-      console.log(response.data);
+      // console.log(response.data);
 
-      router.push({pathname: "/home", params: { data: response.data}})
+      router.push({pathname: "/home", params: { user: response.data.name}})
     } catch (error) {
       Alert.alert("Error", error.message);
     }
@@ -47,6 +49,7 @@ const Home = () => {
           keyboardType="email-address"
           onChangeText={setEmail}
           placeholder="email"
+          autoCorrect={false}
         />
         <TextInput
           style={styles.input}

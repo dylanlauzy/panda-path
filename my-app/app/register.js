@@ -28,7 +28,7 @@ const Register = () => {
         password
       })
 
-      Alert.alert("success!");
+      router.push("/login")
     } catch (error) {
       Alert.alert("Error", error.message);
     }
@@ -60,6 +60,7 @@ const Register = () => {
           value={email}
           onChangeText={setEmail}
           placeholder="email"
+          autoCorrect={false}
         />
         <TextInput
           style={styles.input}
