@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   },
 
   carouselImageStyle: {
-    width: Dimensions.get('window').width -220, 
+    width: Dimensions.get('window').width -250, 
     marginLeft: 20,
     height: 150,
     borderRadius: 20,

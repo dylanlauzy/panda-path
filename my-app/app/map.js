@@ -1,6 +1,7 @@
 import MapView, { Heatmap, LatLng, Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import {
   StyleSheet,
+  KeyboardAvoidingView,
   View,
   Image,
   Dimensions,
@@ -223,9 +224,6 @@ export default function Map() {
           headerStyle: { backgroundColor: COLORS.lightWhite},
           headerShadowVisible: false,
           headerTitle: "Panda Path",
-          headerLeft: () => (
-            <ScreenHeaderBtn iconUrl = {icons.pfp} dimension ="65%"/>
-          ),
           headerRight: () => (
             <ScreenHeaderBtn iconUrl = {icons.menu} dimension ="60%" />
           ),
@@ -263,7 +261,7 @@ export default function Map() {
           />
         )}
       </MapView>
-      <View style={styles.searchContainer}>
+      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : height} style={styles.searchContainer}>
       {distance && duration ? (
           <>
             <View style={{flexDirection: "row", alignItems: "center"}}>
@@ -292,7 +290,7 @@ export default function Map() {
           <Text style={styles.buttonText}>Start</Text>
         </TouchableOpacity>
        
-      </View>
+      </KeyboardAvoidingView>
     </View>
   );
 }
@@ -332,7 +330,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.darkGreen,
     paddingVertical: 10,
     marginTop: 16,
-    marginBottom: 16,
+    marginBottom: 50,
     borderRadius: 15,
   },
   buttonText: {
