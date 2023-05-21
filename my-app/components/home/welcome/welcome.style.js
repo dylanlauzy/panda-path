@@ -15,19 +15,30 @@ const styles = StyleSheet.create({
     fontFamily: FONT.bold,
     fontSize: SIZES.xxLarge,
     color: COLORS.primary,
-    marginTop: 2,
+    marginTop: 0,
     textAlign: 'left',
-    paddingHorizontal: 40,
+    paddingHorizontal: 30,
+    paddingVertical: 0,
+  },
+
+  promptMessage: {
+    fontFamily: FONT.bold,
+    fontSize: 20,
+    textAlign: "left",
+    color: COLORS.primary,
   },
 
   savedPlacesWrapper: {
     marginRight: SIZES.small,
-    height: 300,
+    height: 225,
     width: 300,
     backgroundColor: COLORS.green,
     borderRadius: SIZES.medium,
     marginLeft: 13,
     marginRight: 13,
+    marginTop: 10,
+    marginBottom: 20,
+    paddingHorizontal: 40,
 
   },
 
@@ -37,6 +48,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 20,
+    marginTop: 40,
+    marginBottom: 20,
+    
+  },
+
+  destinationContainer: {
+    height: 100,
+    width: 500,
+    color: COLORS.gray,
+    paddingVertical: 20,
+    alignItems: "center",
   },
 
   mainContainer: {
@@ -45,6 +67,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: SIZES.large,
     paddingHorizontal: 20,
+    marginTop: 10,
     
   },
   
@@ -54,6 +77,9 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     height: "100%",
     backgroundColor: COLORS.lightGreen,
+    paddingHorizontal: 10,
+    marginTop: 10,
+    marginBottom: 10,
   },
 
   searchInput: {
@@ -70,7 +96,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.darkGreen,
     borderRadius: SIZES.medium,
     justifyContent: "center",
-    marginTop: "50%",
+    marginTop: "30%",
 
     marginLeft: "20%",
     marginRight: "20%",
@@ -86,6 +112,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     
+  },
+
+  input: {
+    height: 50,
+    width: 250,
+    textAlign: "center",
+    backgroundColor: COLORS.pureWhite,
+    marginHorizontal: 20,
+    marginVertical: 12,
+    paddingHorizontal: 20,
+    borderWidth: 1,
+    borderColor: COLORS.gray2,
+    borderRadius: 10,
+    fontFamily: FONT.regular,
   },
 
   tabsContainer: {
