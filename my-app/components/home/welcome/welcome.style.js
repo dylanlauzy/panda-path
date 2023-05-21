@@ -19,21 +19,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     paddingHorizontal: 40,
   },
-
-  savedPlacesWrapper: {
-    marginRight: SIZES.small,
-    height: 300,
-    width: 300,
-    backgroundColor: COLORS.green,
-    borderRadius: SIZES.medium,
-    marginLeft: 13,
-    marginRight: 13,
-
-  },
-
-  savedPlacesContainer: {
-    height: 350,
-    width: 300,
+  searchContainer: {
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 20,
@@ -44,12 +30,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     marginTop: SIZES.large,
-    paddingHorizontal: 20,
-    
+    height: 500,
   },
   
   mainWrapper: {
     flex: 1,
+    backgroundColor: COLORS.tertiary,
+    marginRight: SIZES.small,
+    justifyContent: "center",
     alignItems: "center",
     borderRadius: SIZES.medium,
     height: "100%",
@@ -64,20 +52,12 @@ const styles = StyleSheet.create({
   },
 
   searchBtn: {
-    width: "60%",
-    length: "90%",
-    height: 50,
-    backgroundColor: COLORS.darkGreen,
+    width: 50,
+    height: "100%",
+    backgroundColor: COLORS.tertiary,
     borderRadius: SIZES.medium,
-    justifyContent: "center",
-    marginTop: "75%",
-
-    marginLeft: "20%",
-    marginRight: "20%",
-    marginBottom: "5%",
-
+   justifyContent: "center",
     alignItems: "center",
-
   },
   searchBtnImage: {
     width: "50%",
