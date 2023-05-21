@@ -18,11 +18,19 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState("Full-time");
 
-  const [textInputValue, setTextInputValue] = useState('');
+  const [textInputValue1, setTextInputValue1] = useState('');
+  const [textInputValue2, setTextInputValue2] = useState('');
 
-  const handleTextInputChange = (text) => {
-    setTextInputValue(text);
+  const handleTextInputChange1 = (text) => {
+    setTextInputValue1(text);
   };
+
+  const handleTextInputChange2 = (text) => {
+    setTextInputValue2(text);
+  };
+
+
+  
 
   return (
     <View>
@@ -41,14 +49,14 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
             <View style={styles.destinationContainer}>
 
             <TextInput style={styles.input}
-            onChangeText={handleTextInputChange}
-            value={textInputValue}
+            onChangeText={handleTextInputChange1}
+            value={textInputValue1}
             placeholder="Location"
             />
             
             <TextInput style={styles.input}
-            onChangeText={handleTextInputChange}
-            value={textInputValue}
+            onChangeText={handleTextInputChange2}
+            value={textInputValue2}
             placeholder="Destination"
             />
 
@@ -72,26 +80,6 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
 
         </TouchableOpacity>
         </View>
-      </View>
-
-      <View style={styles.tabsContainer}>
-        <FlatList
-          data={jobTypes}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              style={styles.tab(activeJobType, item)}
-              onPress={() => {
-                setActiveJobType(item);
-                router.push(`/search/${item}`);
-              }}
-            >
-              <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
-            </TouchableOpacity>
-          )}
-          keyExtractor={(item) => item}
-          contentContainerStyle={{ columnGap: SIZES.small }}
-          horizontal
-        />
       </View>
     </View>
   );
