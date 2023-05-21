@@ -19,44 +19,75 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     paddingHorizontal: 40,
   },
-  mainContainer: {
+
+  savedPlacesWrapper: {
+    marginRight: SIZES.small,
+    height: 300,
+    width: 300,
+    backgroundColor: COLORS.green,
+    borderRadius: SIZES.medium,
+    marginLeft: 13,
+    marginRight: 13,
+
+  },
+
+  savedPlacesContainer: {
+    height: 350,
+    width: 300,
     justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+
+  mainContainer: {
+    height: 600,
     alignItems: "center",
     flexDirection: "row",
     marginTop: SIZES.large,
-    height: '100%',
     paddingHorizontal: 20,
-
+    
   },
+  
   mainWrapper: {
     flex: 1,
-    backgroundColor: COLORS.lightgreen,
-    marginRight: SIZES.small,
-    justifyContent: "center",
     alignItems: "center",
     borderRadius: SIZES.medium,
     height: "100%",
+    backgroundColor: COLORS.lightGreen,
   },
+
   searchInput: {
     fontFamily: FONT.regular,
     width: "100%",
     height: "100%",
     paddingHorizontal: SIZES.medium,
   },
+
   searchBtn: {
-    paddingVertical: '10%',
-    width: '65%',
-    height: 5,
-    backgroundColor: COLORS.darkgreen,
+    width: "60%",
+    length: "90%",
+    height: 50,
+    backgroundColor: COLORS.darkGreen,
     borderRadius: SIZES.medium,
-   justifyContent: "center",
-    alignItems: "left",
+    justifyContent: "center",
+    marginTop: "50%",
+
+    marginLeft: "20%",
+    marginRight: "20%",
+    marginBottom: "5%",
+
+    alignItems: "center",
+
   },
   searchBtnImage: {
     width: "50%",
     height: "50%",
-    tintColor: COLORS.lightgreen,
+    tintColor: COLORS.white,
+    justifyContent: "center",
+    alignItems: "center",
+    
   },
+
   tabsContainer: {
     width: "100%",
     marginTop: SIZES.medium,

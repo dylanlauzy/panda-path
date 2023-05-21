@@ -2,15 +2,16 @@ const COLORS = {
   green: '#DAEDD9',
   lightgreen: '#E8FFE7',
   darkgreen: '#398175',
-
   primary: "#312651",
-
-
+  
   gray: "#83829A",
   gray2: "#C1C0C8",
 
   white: "#F3F4F8",
   lightWhite: "#FAFAFC",
+  darkGreen: "#398175",
+  green: "#DAEDD9",
+  lightGreen: "#E8FFE7"
 };
 
 const FONT = {

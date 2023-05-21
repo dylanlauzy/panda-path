@@ -5,6 +5,7 @@ import {
   Dimensions,
   Text,
   TouchableOpacity,
+  Platform,
 } from "react-native";
 import {
   GooglePlaceDetail,
@@ -44,7 +45,7 @@ const INITIAL_POSITION = {
   { latitude: 49.278858, longitude: -123.115938, weight: 1 },
   { latitude: 49.278860, longitude: -123.117571, weight: 1 }, 
   { latitude: 49.278494, longitude: -123.128293, weight: 1 },
-  { latitude: 49.279151, longitude: -123.115926, weight: 1 }, 
+  { latitude: 49.279152, longitude: -123.115926, weight: 1 }, 
   { latitude: 49.280804, longitude: -123.115649, weight: 1 },
   { latitude: 49.282798, longitude: -123.124357, weight: 1 }, 
   { latitude: 49.282698, longitude: -123.123638, weight: 1 },
@@ -269,7 +270,7 @@ export default function App() {
         </TouchableOpacity>
         {distance && duration ? (
           <View>
-            <Text>Distance: {distance.toFixed(2)}</Text>
+            <Text>Distance: {distance.toFixed(2)} km</Text>
             <Text>Duration: {Math.ceil(duration)} min</Text>
           </View>
         ) : null}
