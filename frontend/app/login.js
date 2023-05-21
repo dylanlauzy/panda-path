@@ -26,7 +26,7 @@ const Home = () => {
 
       router.push({pathname: "/home", params: { user: response.data.name}})
     } catch (error) {
-      Alert.alert("Error", error.message);
+      Alert.alert("Error", "Incorrect user credentials.");
     }
   }
 
