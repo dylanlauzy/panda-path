@@ -30,8 +30,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
             <View style={styles.savedPlacesWrapper}>
             </View>
           </View>
-          
-          // Search button 
+      
           <TouchableOpacity style={styles.searchBtn} onPress={
             () => {
               router.push("./map")
@@ -47,7 +46,6 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         </TouchableOpacity>
         </View>
       </View>
-
 
       <View style={styles.tabsContainer}>
         <FlatList
