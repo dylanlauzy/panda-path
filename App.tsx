@@ -5,6 +5,7 @@ import {
   Dimensions,
   Text,
   TouchableOpacity,
+  Platform,
 } from "react-native";
 import {
   GooglePlaceDetail,
@@ -269,7 +270,7 @@ export default function App() {
         </TouchableOpacity>
         {distance && duration ? (
           <View>
-            <Text>Distance: {distance.toFixed(2)}</Text>
+            <Text>Distance: {distance.toFixed(2)} km</Text>
             <Text>Duration: {Math.ceil(duration)} min</Text>
           </View>
         ) : null}
