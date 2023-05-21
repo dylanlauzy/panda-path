@@ -30,7 +30,14 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
             <View style={styles.savedPlacesWrapper}>
             </View>
           </View>
-          <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
+          
+          // Search button 
+          <TouchableOpacity style={styles.searchBtn} onPress={
+            () => {
+              router.push("./map")
+            }
+          } >
+          
           <Image
             source={icons.search}
             resizeMode='contain'
