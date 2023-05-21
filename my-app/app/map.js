@@ -17,8 +17,10 @@ import Constants from "expo-constants";
 import { useEffect, useRef, useState } from "react";
 import MapViewDirections from "react-native-maps-directions";
 import * as Location from "expo-location";
-import { FONT, SIZES, COLORS } from "../constants/theme";
+import {COLORS, icons, images, SIZES, FONT} from '../constants';
+import { ScreenHeaderBtn } from '../components'
 import axios from 'axios';
+import { Stack } from "expo-router"
 
 const { width, height } = Dimensions.get("window");
 
@@ -216,6 +218,19 @@ export default function Map() {
 
   return (
     <View style={styles.container}>
+      <Stack.Screen
+        options = {{ 
+          headerStyle: { backgroundColor: COLORS.lightWhite},
+          headerShadowVisible: false,
+          headerTitle: "Panda Path",
+          headerLeft: () => (
+            <ScreenHeaderBtn iconUrl = {icons.pfp} dimension ="65%"/>
+          ),
+          headerRight: () => (
+            <ScreenHeaderBtn iconUrl = {icons.menu} dimension ="60%" />
+          ),
+        }}
+      />
       <MapView
         ref={mapRef}
         style={styles.map}
@@ -312,11 +327,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     fontFamily: FONT.regular,
-    paddingVertical: 20,
   },
   button: {
     backgroundColor: COLORS.darkGreen,
-    paddingVertical: 20,
+    paddingVertical: 10,
     marginTop: 16,
     marginBottom: 16,
     borderRadius: 15,
@@ -329,7 +343,7 @@ const styles = StyleSheet.create({
   },
   timeLabel: {
     fontFamily: FONT.bold,
-    fontSize: SIZES.large,
+    fontSize: SIZES.xLarge,
   },
   distLabel: {
     fontFamily: FONT.regular,
@@ -338,7 +352,10 @@ const styles = StyleSheet.create({
   },
   subText: {
     fontFamily: FONT.regular,
-
     color: COLORS.gray
+  },
+  modeBtn: {
+    borderRadius: 50,
+    border: "black 1px"
   }
 });

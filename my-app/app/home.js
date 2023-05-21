@@ -18,12 +18,12 @@ const Home = () => {
             options = {{ 
         headerStyle: { backgroundColor: COLORS.lightWhite},
         headerShadowVisible: false, 
-    headerLeft: () => (
-        <ScreenHeaderBtn iconUrl = {icons.pfp} dimension ="65%"/>
-    ),
-    headerRight: () => (
-        <ScreenHeaderBtn iconUrl = {icons.menu} dimension ="60%" />
-    ),
+        headerLeft: () => (
+          <ScreenHeaderBtn iconUrl = {icons.pfp} dimension ="65%"/>
+        ),
+        headerRight: () => (
+          <ScreenHeaderBtn iconUrl = {icons.menu} dimension ="60%" />
+        ),
     headerTitle: ""
             }}
     />   
