@@ -41,12 +41,12 @@ Panda Path was built on React Native as a mobile app. We used JavaScript along w
 
 ---
 
-## 5. Contributions
+## 5. Made with Love By: 
 
-### [Dylan Lau(https://www.linkedin.com/in/dylanzylau/)
+### [Dylan Lau](https://www.linkedin.com/in/dylanzylau/)
 
 
-### [Kevin Hu(https://www.linkedin.com/in/kevin-hu1/)
+### [Kevin Hu](https://www.linkedin.com/in/kevin-hu1/)
 
 
 ### [Aurora Cheng](https://www.linkedin.com/in/aurora-cheng-07613523b/)
