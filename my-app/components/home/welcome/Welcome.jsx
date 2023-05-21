@@ -19,17 +19,6 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState("Full-time");
 
-  const [textInputValue1, setTextInputValue1] = useState('');
-  const [textInputValue2, setTextInputValue2] = useState('');
-
-  const handleTextInputChange1 = (text) => {
-    setTextInputValue1(text);
-  };
-
-  const handleTextInputChange2 = (text) => {
-    setTextInputValue2(text);
-  };
-
   const Carousel = () => {
     const data = [
       { id: 1, image: require('../../../assets/images/School.png') },
@@ -56,10 +45,19 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
       />
     );
   };
+
+    const [textInputValue1, setTextInputValue1] = useState('');
+  const [textInputValue2, setTextInputValue2] = useState('');
+
+  const handleTextInputChange1 = (text) => {
+    setTextInputValue1(text);
+  };
+
+  const handleTextInputChange2 = (text) => {
+    setTextInputValue2(text);
+  };
   
 
-
-  
 
   return (
     <View>
