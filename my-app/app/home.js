@@ -19,7 +19,7 @@ const Home = () => {
         headerStyle: { backgroundColor: COLORS.lightWhite},
         headerShadowVisible: false, 
     headerLeft: () => (
-        <ScreenHeaderBtn iconUrl = {icons.pfp} dimension ="60%" />
+        <ScreenHeaderBtn iconUrl = {icons.pfp} dimension ="65%"/>
     ),
     headerRight: () => (
         <ScreenHeaderBtn iconUrl = {icons.menu} dimension ="60%" />

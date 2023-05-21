@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions} from "react-native";
 
 import { COLORS, FONT, SIZES } from "../../../constants";
 
@@ -30,15 +30,15 @@ const styles = StyleSheet.create({
 
   savedPlacesWrapper: {
     marginRight: SIZES.small,
-    height: 225,
-    width: 300,
+    height: 230,
+    width: 320,
     backgroundColor: COLORS.green,
     borderRadius: SIZES.medium,
-    marginLeft: 13,
-    marginRight: 13,
+    marginLeft: 5,
+    marginRight: 5,
     marginTop: 10,
     marginBottom: 20,
-    paddingHorizontal: 40,
+    paddingHorizontal: 10,
 
   },
 
@@ -47,10 +47,19 @@ const styles = StyleSheet.create({
     width: 300,
     justifyContent: "center",
     alignItems: "center",
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     marginTop: 40,
-    marginBottom: 20,
+    marginBottom: 5,
     
+  },
+
+  savedPlacesText: {
+    fontFamily: FONT.bold,
+    fontSize: 25,
+    color: COLORS.primary,
+    marginTop: 10,
+    textAlign: 'left',
+    paddingTop: 10,
   },
 
   destinationContainer: {
@@ -77,7 +86,7 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     height: "100%",
     backgroundColor: COLORS.lightGreen,
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     marginTop: 10,
     marginBottom: 10,
   },
@@ -126,6 +135,22 @@ const styles = StyleSheet.create({
     borderColor: COLORS.gray2,
     borderRadius: 10,
     fontFamily: FONT.regular,
+  },
+
+  carouselStyle: {
+    height: 300,
+    width: 200,
+    paddingLeft: 5,
+    paddingRight: 10,
+    paddingTop: 15,
+    paddingBottom: 5,
+  },
+
+  carouselImageStyle: {
+    width: Dimensions.get('window').width -220, 
+    marginLeft: 20,
+    height: 150,
+    borderRadius: 20,
   },
 
   tabsContainer: {
