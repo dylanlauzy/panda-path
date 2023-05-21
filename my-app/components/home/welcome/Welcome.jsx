@@ -50,7 +50,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
         horizontal
-        showsHorizontalScrollIndicator={true}
+        showsHorizontalScrollIndicator={false}
         snapToInterval={Dimensions.get('window').width}
         decelerationRate="fast"
       />
