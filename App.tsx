@@ -6,7 +6,7 @@ import {
   Text,
   TouchableOpacity,
   Platform,
-} from "react-native";
+} from "react-native";  
 import {
   GooglePlaceDetail,
   GooglePlacesAutocomplete,
@@ -227,13 +227,12 @@ export default function App() {
       >
         <Heatmap
             points={this.points}
-            radius={100}
-            opacity={0.8}
+            radius={30}
+            opacity={1}
             gradient={{
-              colors: ["purple", "red", "orange", "white"],
-              startPoints: Platform.OS === 'ios' ? [0.04, 0.1, 0.45, 0.5] :
-                [0.25, 0.5, 0.75, 1],
-              colorMapSize: 1000
+              colors: ["black", "purple", "red", "yellow", "white"],
+              startPoints: [0.01, 0.04, 0.1, 0.45, 0.5],
+              colorMapSize: 50
             }}
           >
           </Heatmap>
