@@ -16,18 +16,21 @@ const styles = StyleSheet.create({
     fontSize: SIZES.xxLarge,
     color: COLORS.primary,
     marginTop: 2,
-    textAlign: 'center'
+    textAlign: 'left',
+    paddingHorizontal: 40,
   },
-  searchContainer: {
+  mainContainer: {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
     marginTop: SIZES.large,
-    height: 500,
+    height: '100%',
+    paddingHorizontal: 20,
+
   },
-  searchWrapper: {
+  mainWrapper: {
     flex: 1,
-    backgroundColor: COLORS.tertiary,
+    backgroundColor: COLORS.lightgreen,
     marginRight: SIZES.small,
     justifyContent: "center",
     alignItems: "center",
@@ -41,17 +44,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: SIZES.medium,
   },
   searchBtn: {
-    width: 50,
-    height: "100%",
-    backgroundColor: COLORS.tertiary,
+    paddingVertical: '10%',
+    width: '65%',
+    height: 5,
+    backgroundColor: COLORS.darkgreen,
     borderRadius: SIZES.medium,
-   justifyContent: "flex-end",
-    alignItems: "center",
+   justifyContent: "center",
+    alignItems: "left",
   },
   searchBtnImage: {
     width: "50%",
     height: "50%",
-    tintColor: COLORS.white,
+    tintColor: COLORS.lightgreen,
   },
   tabsContainer: {
     width: "100%",

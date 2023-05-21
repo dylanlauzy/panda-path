@@ -26,8 +26,8 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         >Hi User!</Text>
       </View>
 
-      <View style={styles.searchContainer}>
-        <View style={styles.searchWrapper}>
+      <View style={styles.mainContainer}>
+        <View style={styles.mainWrapper}>
           {
           // 
            // TextInput style={styles.searchInput}
