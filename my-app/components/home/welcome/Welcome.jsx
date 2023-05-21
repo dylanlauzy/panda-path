@@ -18,6 +18,12 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState("Full-time");
 
+  const [textInputValue, setTextInputValue] = useState('');
+
+  const handleTextInputChange = (text) => {
+    setTextInputValue(text);
+  };
+
   return (
     <View>
       <View style={styles.container}>
@@ -27,10 +33,35 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
       <View style={styles.mainContainer}>
         <View style={styles.mainWrapper}>
           <View style={styles.savedPlacesContainer}>
-            <View style={styles.savedPlacesWrapper}>
+            <View style={styles.savedPlacesWrapper}></View>
+            <Text style={styles.promptMessage}>Where would you like to go today?</Text>
+
+            <View style={styles.destinationContainer}>
+
+            <TextInput style={styles.input}
+            onChangeText={handleTextInputChange}
+            value={textInputValue}
+            placeholder="Location"
+            />
+            
+            <TextInput style={styles.input}
+            onChangeText={handleTextInputChange}
+            value={textInputValue}
+            placeholder="Destination"
+            />
+
             </View>
-          </View>
-          <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
+
+            
+            
+      </View>
+      
+          <TouchableOpacity style={styles.searchBtn} onPress={
+            () => {
+              router.push("./map")
+            }
+          } >
+          
           <Image
             source={icons.search}
             resizeMode='contain'
@@ -40,7 +71,6 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         </TouchableOpacity>
         </View>
       </View>
-
 
       <View style={styles.tabsContainer}>
         <FlatList

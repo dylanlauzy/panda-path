@@ -73,22 +73,26 @@ const INITIAL_POSITION = {
   { latitude: 49.286334, longitude: -123.129089, weight: 1 },
 
   //east hastings
-  { latitude: 49.281348, longitude: -123.104134, weight: 1 }, //left
-  { latitude: 49.281348, longitude: -123.079202, weight: 1 },
-  { latitude: 49.281348, longitude: -123.082337, weight: 1 },
-  { latitude: 49.281348, longitude: -123.085472, weight: 1 },
+  { latitude: 49.281782, longitude: -123.104134, weight: 1 }, //left
+  { latitude: 49.280123, longitude: -123.079202, weight: 1 },
+  { latitude: 49.278402, longitude: -123.082337, weight: 1 },
+  { latitude: 49.282523, longitude: -123.086472, weight: 1 },
   { latitude: 49.281348, longitude: -123.088607, weight: 1 },
   { latitude: 49.281348, longitude: -123.091742, weight: 1 },
-  { latitude: 49.281348, longitude: -123.094877, weight: 1 },
-  { latitude: 49.281348, longitude: -123.098012, weight: 1 },
-  { latitude: 49.281348, longitude: -123.101147, weight: 1 },
+  { latitude: 49.281348, longitude: -123.097877, weight: 1 },
+  { latitude: 49.281348, longitude: -123.068012, weight: 1 },
+  { latitude: 49.281348, longitude: -123.111147, weight: 1 },
   { latitude: 49.281348, longitude: -123.104282, weight: 1 },
   { latitude: 49.281348, longitude: -123.107417, weight: 1 },
-  { latitude: 49.281348, longitude: -123.110552, weight: 1 },
-  { latitude: 49.281348, longitude: -123.113687, weight: 1 },
+  { latitude: 49.281348, longitude: -123.100552, weight: 1 },
+  { latitude: 49.281348, longitude: -123.123687, weight: 1 },
   { latitude: 49.281348, longitude: -123.116822, weight: 1 },
   { latitude: 49.281348, longitude: -123.119957, weight: 1 },
   { latitude: 49.281348, longitude: -123.123092, weight: 1 },
+  { latitude: 49.280364, longitude: -123.105760, weight: 1 },
+  { latitude: 49.279314, longitude: -123.107543, weight: 1 },
+  { latitude: 49.280308, longitude: -123.101526, weight: 1 },
+  { latitude: 49.278611, longitude: -123.102002, weight: 1 },
   { latitude: 49.281348, longitude: -123.079202, weight: 1 }, //right
 
   // kits
@@ -113,6 +117,25 @@ const INITIAL_POSITION = {
   { latitude: 49.189311, longitude: -122.856146, weight: 1 },
   { latitude: 49.187515, longitude: -122.822135, weight: 1 },
   { latitude: 49.191790, longitude: -122.828770, weight: 1 },
+
+  // mount pleasant
+  { latitude: 49.264522, longitude: -123.102496, weight: 1 },
+  { latitude: 49.262691, longitude: -123.110057, weight: 1 },
+  { latitude: 49.259817, longitude: -123.101819, weight: 1 },
+  { latitude: 49.263402, longitude: -123.093230, weight: 1 },
+  { latitude: 49.259145, longitude: -123.098727, weight: 1 },
+  { latitude: 49.264074, longitude: -123.098727, weight: 1 },
+  { latitude: 49.270364, longitude: -123.100542, weight: 1 },
+  { latitude: 49.262523, longitude: -123.095474, weight: 1 },
+
+  // other
+  { latitude: 49.253028, longitude: -123.157546, weight: 1 },
+  { latitude: 49.244780, longitude: -123.143941, weight: 1 },
+  { latitude: 49.273248, longitude: -123.040396, weight: 1 },
+  { latitude: 49.261313, longitude: -123.122606, weight: 1 },
+  { latitude: 49.264780, longitude: -123.193601, weight: 1 },
+  { latitude: 49.261363, longitude: -123.131042, weight: 1 },
+
 ];
 
 function InputAutocomplete(props) {
@@ -219,13 +242,12 @@ export default function Map() {
       >
         <Heatmap
             points={this.points}
-            radius={100}
-            opacity={0.8}
+            radius={35}
+            opacity={0.95}
             gradient={{
-              colors: ["purple", "red", "orange", "white"],
-              startPoints: Platform.OS === 'ios' ? [0.04, 0.1, 0.45, 0.5] :
-                [0.25, 0.5, 0.75, 1],
-              colorMapSize: 1000
+              colors: ["black", "purple", "red", "yellow", "white"],
+              startPoints: [0.01, 0.04, 0.1, 0.45, 0.5],
+              colorMapSize: 50
             }}
           >
           </Heatmap>
