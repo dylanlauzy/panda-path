@@ -30,13 +30,13 @@ const styles = StyleSheet.create({
 
   savedPlacesWrapper: {
     marginRight: SIZES.small,
-    height: 225,
-    width: 300,
+    height: 230,
+    width: 320,
     backgroundColor: COLORS.green,
     borderRadius: SIZES.medium,
-    marginLeft: 13,
-    marginRight: 13,
-    marginTop: 15,
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 10,
     marginBottom: 20,
     paddingHorizontal: 10,
 
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 10,
     marginTop: 40,
-    marginBottom: 20,
+    marginBottom: 5,
     
   },
 
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     height: "100%",
     backgroundColor: COLORS.lightGreen,
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     marginTop: 10,
     marginBottom: 10,
   },
@@ -138,17 +138,19 @@ const styles = StyleSheet.create({
   },
 
   carouselStyle: {
-    height: 100,
-    width: 50,
-    paddingLeft: 40,
-    paddingTop: 5,
-    paddingBottom: 15,
+    height: 300,
+    width: 200,
+    paddingLeft: 5,
+    paddingRight: 10,
+    paddingTop: 15,
+    paddingBottom: 5,
   },
 
   carouselImageStyle: {
-    width: Dimensions.get('window').width -200, 
+    width: Dimensions.get('window').width -220, 
+    marginLeft: 20,
     height: 150,
-    borderRadius: 10,
+    borderRadius: 20,
   },
 
   tabsContainer: {

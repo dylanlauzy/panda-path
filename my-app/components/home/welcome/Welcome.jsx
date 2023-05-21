@@ -32,13 +32,15 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
 
   const Carousel = () => {
     const data = [
-      { id: 1, image: require('../../../assets/images/kemal.jpg') },
+      { id: 1, image: require('../../../assets/images/School.png') },
+      { id: 2, image: require('../../../assets/images/Home.png') },
+      { id: 3, image: require('../../../assets/images/Work.png') },
       // Add more images as needed
     ];
   
     const renderItem = ({ item }) => (
       <View style={styles.carouselStyle}>
-        <Image source={item.image} style={styles.carouselImageStyle} />
+        <Image source={item.image} style={styles.carouselImageStyle}/>
       </View>
     );
   
@@ -48,7 +50,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
         horizontal
-        showsHorizontalScrollIndicator={false}
+        showsHorizontalScrollIndicator={true}
         snapToInterval={Dimensions.get('window').width}
         decelerationRate="fast"
       />
