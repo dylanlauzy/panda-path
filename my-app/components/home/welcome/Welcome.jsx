@@ -21,31 +21,26 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.welcomeMessage}
-        
-        >Hi User!</Text>
+        <Text style={styles.welcomeMessage}>Hi User!</Text>
       </View>
 
-      <View style={styles.searchContainer}>
-        <View style={styles.searchWrapper}>
-          {
-          // 
-           // TextInput style={styles.searchInput}
-           // value={searchTerm}
-            // onChangeText={(text) => setSearchTerm(text)}
-           // placeholder='What are you looking for?'
-          // 
-}
-        </View>
-      </View>
-
-      <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
+      <View style={styles.mainContainer}>
+        <View style={styles.mainWrapper}>
+          <View style={styles.savedPlacesContainer}>
+            <View style={styles.savedPlacesWrapper}>
+            </View>
+          </View>
+          <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
           <Image
             source={icons.search}
             resizeMode='contain'
             style={styles.searchBtnImage}
           />
+
         </TouchableOpacity>
+        </View>
+      </View>
+
 
       <View style={styles.tabsContainer}>
         <FlatList
