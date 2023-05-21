@@ -316,7 +316,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 4,
     elevation: 4,
-    paddingHorizontal: 20,
+    paddingHorizontal: 30,
     paddingVertical: 30,
     borderRadius: 15,
     bottom: 0,
@@ -325,11 +325,12 @@ const styles = StyleSheet.create({
     borderColor: COLORS.gray2,
     borderRadius: 10,
     borderWidth: 1,
-    fontFamily: FONT.regular
+    fontFamily: FONT.regular,
+    paddingVertical: 20,
   },
   button: {
     backgroundColor: COLORS.darkGreen,
-    paddingVertical: 12,
+    paddingVertical: 20,
     marginTop: 16,
     marginBottom: 16,
     borderRadius: 15,
@@ -342,6 +343,8 @@ const styles = StyleSheet.create({
   },
   label: {
     fontFamily: FONT.regular,
-    fontSize: SIZES.smamediumll
+    fontSize: SIZES.smamediumll,
+    paddingVertical: 20,
+    paddingTop: 20,
   }
 });
